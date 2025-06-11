@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IITK Firewall Authenticator Service", "IITK Firewall Authenticator Service\IITK Firewall Authenticator Service.csproj", "{91CDD57F-1E1E-462B-AB08-D4548A698C58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IITK Firewall Authenticator App", "IITK Firewall Authenticator App\IITK Firewall Authenticator App.csproj", "{88D94D5A-C658-451A-B497-D5C0C9AF025D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IITK Firewall Service Installer", "IITKFirewallService\IITKFirewallService.vdproj", "{A2C6401F-986C-CD0D-2136-D37105162403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CredentialsLibrary", "CredentialsLibrary\CredentialsLibrary.csproj", "{9390FCE6-7B1B-40D2-9BE1-421384A4801D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91CDD57F-1E1E-462B-AB08-D4548A698C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CDD57F-1E1E-462B-AB08-D4548A698C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CDD57F-1E1E-462B-AB08-D4548A698C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CDD57F-1E1E-462B-AB08-D4548A698C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88D94D5A-C658-451A-B497-D5C0C9AF025D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D94D5A-C658-451A-B497-D5C0C9AF025D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D94D5A-C658-451A-B497-D5C0C9AF025D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88D94D5A-C658-451A-B497-D5C0C9AF025D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C6401F-986C-CD0D-2136-D37105162403}.Debug|Any CPU.ActiveCfg = Debug
+		{A2C6401F-986C-CD0D-2136-D37105162403}.Release|Any CPU.ActiveCfg = Release
+		{9390FCE6-7B1B-40D2-9BE1-421384A4801D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9390FCE6-7B1B-40D2-9BE1-421384A4801D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9390FCE6-7B1B-40D2-9BE1-421384A4801D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9390FCE6-7B1B-40D2-9BE1-421384A4801D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F509DA40-4995-442E-A103-736B193B0368}
+	EndGlobalSection
+EndGlobal

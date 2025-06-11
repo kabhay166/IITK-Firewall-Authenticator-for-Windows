@@ -1,0 +1,21 @@
+﻿<Window x:Class="IITK_Firewall_Authenticator_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IITK_Firewall_Authenticator_App"
+        mc:Ignorable="d"
+        Title="Credentials for IITK Network" Height="400" Width="630">
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <TextBlock HorizontalAlignment="Left" Margin="83,29,0,0" TextWrapping="Wrap" Text="Please provide your username and password to connect to IITK Firewall. This will only be needed once." VerticalAlignment="Top" Width="468" FontSize="18"/>
+        <Label Content="Username:"  HorizontalAlignment="Left" Margin="96,138,0,0" VerticalAlignment="Top" Height="38" Width="106" FontSize="16"/>
+        <TextBox x:Name="username_textbox" Padding="10,0,0,0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="249,138,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="224" TextChanged="TextBox_TextChanged" Height="38" FontSize="16"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="96,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.204,-0.104" Height="35" Width="106" FontSize="16"/>
+        <TextBox x:Name="password_textbox_hidden" Padding="10,0,0,0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="249,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="38" FontSize="16" />
+        <PasswordBox x:Name="password_passwordbox" Padding="10,0,0,0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="249,192,0,0" VerticalAlignment="Top" Width="224" Height="38" FontSize="16" Password=""/>
+        <Button x:Name="login_button" Content="Login" HorizontalAlignment="Center" Margin="0,262,0,0" VerticalAlignment="Top" Click="LoginButton_Click" Height="44" Width="132" FontSize="18"/>
+        <Button x:Name="show_password" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="489,201,0,0" PreviewMouseLeftButtonDown="ShowPassword_MouseLeftButtonDown" PreviewMouseLeftButtonUp="ShowPassword_MouseLeftButtonUp" >
+            <Image  Source="/Assets/show_password.png" Stretch="Fill"/>
+        </Button>
+    </Grid>
+</Window>
