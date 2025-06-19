@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using System.ServiceProcess;
 using System.Threading.Tasks;
+using System.Net.NetworkInformation;
 
 namespace IITK_Firewall_Authenticator_Service
 {
@@ -26,10 +27,12 @@ namespace IITK_Firewall_Authenticator_Service
             eventLog1.Source = "IITKFirewallService";
             eventLog1.Log = "IITKFirewallLog";
             this.CanHandlePowerEvent = true;
+
+            NetworkChange.NetworkAddressChanged += NetworkChange_NetworkAddressChanged; 
         }
 
         protected override void OnStart(string[] args)
-        {
+        {            
             eventLog1.WriteEntry("Starting the service.");
             Task.Run(async () => await StartAuthenticator());
 
@@ -71,6 +74,25 @@ namespace IITK_Firewall_Authenticator_Service
             {
                 eventLog1.WriteEntry("Exception in StartAuthenticator: " + ex.ToString(), EventLogEntryType.Error);
             }
+
+        }
+
+        private void NetworkChange_NetworkAddressChanged(object sender, EventArgs e)
+        {
+
+            _ = Task.Run(async () =>
+            {
+                eventLog1.WriteEntry("Network Changed detected.");
+                bool connectedToIITK = await FirewallAuthenticator.ConnectedToIITK(eventLog1);
+                if (connectedToIITK)
+                {
+                    await StartAuthenticator();
+                }
+                else
+                {
+                    eventLog1.WriteEntry("IITK Network not found");
+                }
+            });
 
         }
 

@@ -170,6 +170,29 @@ namespace IITK_Firewall_Authenticator_Service
         }
 
 
+        public static async Task<bool> ConnectedToIITK(EventLog eventLog)
+        {
+            try
+            {
+                var loginGetResponse = await _httpClient.GetAsync(loginUrl);
+
+                if (loginGetResponse.IsSuccessStatusCode)
+                {
+                    return true;
+                } else
+                {
+                    eventLog.WriteEntry("Not Connected to IITK Network.");
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+
+
     }
 }
 
